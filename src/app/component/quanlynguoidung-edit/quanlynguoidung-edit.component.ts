@@ -25,6 +25,8 @@ export class QuanlynguoidungEditComponent implements OnInit, OnDestroy{
 //     statesId: 0,
 //     citesId: 0
 // };
+checkState= true;
+checkCity= true;
 user: any;
 country: Countries={
   id : 0 ,
@@ -114,6 +116,7 @@ getAllCountry(){
 
   onChangeCountry(event: any) {
     const countryId= event.target.value;
+     this.checkState = !this.checkState;
     console.log(countryId)
     if (countryId) {
       this.coutryService.getStates(countryId).subscribe((data:any) => {
@@ -128,7 +131,7 @@ getAllCountry(){
   onChangeStates(event: any){
 
     const statesId= event.target.value;
-     
+      this.checkCity =!this.checkCity;
       if (statesId) {
         this.coutryService.getAllCity(statesId).subscribe((data:any) => {
          this.citys= data
