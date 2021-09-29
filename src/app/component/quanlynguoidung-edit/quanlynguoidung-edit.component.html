@@ -1,0 +1,87 @@
+<div class="container">
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Cập nhật thông tin người dùng</h3>
+        </div>
+        <div class="panel-body">
+
+            <form *ngIf="user">
+
+                <input type="text" hidden class="form-control" readonly id="" placeholder="Input field" [(ngModel)]="user.id" [ngModelOptions]="{standalone: true}">
+
+                <div class="row">
+
+                    <div class="form-group col-md-6">
+                        <label for="">Tên</label>
+                        <input type="text" class="form-control" id="" placeholder="Input field" [(ngModel)]="user.name" [ngModelOptions]="{standalone: true}">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="">Số điện thoại</label>
+                        <input type="number" class="form-control" id="" placeholder="Input field" [(ngModel)]="user.phone" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="">Email</label>
+                        <input type="email" class="form-control" id="" placeholder="Input field" [(ngModel)]="user.email" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <label for="">Địa chỉ chi tiết</label>
+                        <input type="text" class="form-control" id="" placeholder="Input field" [(ngModel)]="user.address" [ngModelOptions]="{standalone: true}">
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="form-group col-md-6">
+                        <label for="">Tỉnh/ thành phố</label>
+                        <select class="form-control" (change)="onChangeCountry($event)" [(ngModel)]="user.countryId" [ngModelOptions]="{standalone: true}">
+
+                            <option    value="{{ country.id}}"  >{{ country.nameCountry}}</option>
+                            <ng-container *ngFor="let count of countries ">
+                                <option *ngIf="count.id!=country.id"  [value]="count.id" >{{count.nameCountry}}</option>
+                             </ng-container>
+
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="">Quận/ huyện</label>
+                        <select class="form-control" (change)="onChangeStates($event)" [(ngModel)]="user.statesId" [ngModelOptions]="{standalone: true}">
+
+                            <option  value="{{ state.id}}">{{ state.nameStates}}</option>
+                            <ng-container *ngFor="let count of states  ">
+                                <option *ngIf="count.id!=state.id" [value]="count.id">{{count.nameStates}}</option>
+                            </ng-container>
+
+                        </select>
+
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col-md-6">
+
+                        <label for="">Phường/ xã</label>
+                        <select class="form-control" [(ngModel)]="user.citesId" [ngModelOptions]="{standalone: true}">
+                            
+                            <option  value="{{ city.id}}">{{ city.nameCities}}</option>
+                            <ng-container *ngFor="let count of citys ">
+                                <option *ngIf="count.id!=city.id" [value]="count.id">{{count.nameCities}}</option>
+                            </ng-container>
+                        </select>
+
+
+
+                    </div>
+                </div>
+                <button type="button" (click)="updateUser()" class="btn btn-primary"> <i class="bi bi-save"></i>Lưu</button>
+                <button type="button" style="margin-left: 20px;" (click)="backtoList()" class="btn btn-primary">Thoát</button>
+            </form>
+
+        </div>
+    </div>
+
+</div>

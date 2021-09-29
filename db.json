@@ -1,0 +1,83 @@
+{
+  "users": [
+    {
+      "id": 4,
+      "name": "Angular4",
+      "phone": 123345,
+      "email": "Jhas@gmail.com",
+      "address": "xom A1- Thôn B",
+      "countryId": 1,
+      "statesId": 1,
+      "citesId": 2
+    },
+    {
+      "id": 5,
+      "name": "Angular5qw",
+      "phone": 123345,
+      "email": "kieu@gmail.com",
+      "address": "xom A1- Thôn B",
+      "countryId": "2",
+      "statesId": "3",
+      "citesId": "4"
+    }
+  ],
+  "countries": [
+    {
+      "id": 1,
+      "nameCountry": "Ha Noi"
+    },
+    {
+      "id": 2,
+      "nameCountry": "Nam Dinh"
+    }
+  ],
+  "states": [
+    {
+      "id": 1,
+      "nameStates": "Nam Tu liem",
+      "countyId": 1
+    },
+    {
+      "id": 2,
+      "nameStates": "Bac Tu Liem",
+      "countyId": 1
+    },
+    {
+      "id": 3,
+      "nameStates": "Vu Ban",
+      "countyId": 2
+    },
+    {
+      "id": 4,
+      "nameStates": "Y yen",
+      "countyId": 2
+    }
+  ],
+  "cities": [
+    {
+      "id": 1,
+      "nameCities": "My dinh 2",
+      "statesId": 1
+    },
+    {
+      "id": 2,
+      "nameCities": "My dinh 1",
+      "statesId": 1
+    },
+    {
+      "id": 3,
+      "nameCities": "Thanh Loi",
+      "statesId": 3
+    },
+    {
+      "id": 4,
+      "nameCities": "Lien Minh",
+      "statesId": 3
+    },
+    {
+      "id": 5,
+      "nameCities": "Lien Bao",
+      "statesId": 3
+    }
+  ]
+}

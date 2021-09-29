@@ -1,0 +1,48 @@
+<div class="container">
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Thông tin người dùng</h3>
+        </div>
+        <div class="panel-body">
+
+            <form action="" method="POST" role="form">
+
+                <div class="form-group">
+                    <label for="">Tên</label>
+                    <input type="text" readonly class="form-control" id="" placeholder="Input field" [value]="user.name">
+                </div>
+
+                <div class="form-group">
+                    <label for="">Số điện thoại</label>
+                    <input type="text" readonly class="form-control" id="" placeholder="Input field" [value]="user.phone">
+                </div>
+                <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="text" readonly class="form-control" id="" placeholder="Input field" [value]="user.email">
+                </div>
+                <div class="form-group">
+                    <label for="">Địa chỉ</label>
+                    <input type="text" readonly class="form-control" id="" placeholder="Input field" [value]="user.address">
+                </div>
+                <div class="form-group">
+                    <label for="">Tỉnh/ thành phố</label>
+                    <input type="text" readonly class="form-control" id="" placeholder="Input field" [value]="country.nameCountry">
+                </div>
+                <div class="form-group">
+                    <label for="">Quận/ Huyện</label>
+                    <input type="text" readonly class="form-control" id="" placeholder="Input field" [value]="state.nameStates">
+                </div>
+                <div class="form-group">
+                    <label for="">Xã/ Phường</label>
+                    <input type="text" readonly class="form-control" id="" placeholder="Input field" [value]="city.nameCities">
+                </div>
+
+
+                <button (click)="backtolist()" class="btn btn-primary">Quay lại trang chủ</button>
+            </form>
+
+        </div>
+    </div>
+
+</div>

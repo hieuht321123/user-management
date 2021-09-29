@@ -1,0 +1,101 @@
+<div class="container">
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Thêm thông tin người dùng</h3>
+        </div>
+        <div class="panel-body">
+            <div class="create-account">
+
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+                            <div class="row">
+                                <div class="form-group col-md-6">
+
+                                    <label for="exampleInputEmail1"> Tên<span style="color: red;">*</span>:</label><input type="text" class="form-control" placeholder="Enter name" formControlName="names">
+                                    <div *ngIf="f.names.invalid && (f.names.dirty || f.names.touched)">
+                                        <div *ngIf="f.names.errors" class="invalid-feedback">
+                                            <div *ngIf="f.names.errors.required">Bạn cần nhập tên</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="exampleInputEmail1">Số điện thoại<span style="color: red;">*</span>: </label>
+                                    <input type="number" class="form-control" placeholder="Enter phone number" formControlName="phones">
+
+                                    <div *ngIf="f.phones.invalid && (f.phones.dirty || f.phones.touched)">
+                                        <div *ngIf="f.phones.errors" class="invalid-feedback">
+                                            <div *ngIf="f.phones.errors.required">Bạn cần nhập số điện thoại</div>
+                                            <div *ngIf="f.phones.errors.pattern">Invalid phone number.</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row ">
+                                <div class="form-group col-md-6">
+                                    <label for="exampleInputEmail1">Email<span style="color: red;">*</span>: </label>
+                                    <input type="email" class="form-control" placeholder="Enter email" formControlName="emails">
+                                    <div *ngIf="f.emails.invalid && (f.emails.dirty || f.emails.touched)">
+                                        <div *ngIf="f.emails.errors" class="invalid-feedback">
+                                            <div *ngIf="f.emails.errors.required">Bạn cần nhập email</div>
+                                            <div *ngIf="f.emails.errors.pattern">Bạn chưa nhập đúng định dạng email example@fpt.com.vn.</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Địa chỉ chi tiết<span style="color: red;">*</span>: </label>
+                                <input type="text" class="form-control" placeholder="Enter địa chỉ" formControlName="addresss">
+                                <div *ngIf="f.addresss.invalid && (f.addresss.dirty || f.addresss.touched)">
+                                    <div *ngIf="f.addresss.errors" class="invalid-feedback">
+                                        <div *ngIf="f.addresss.errors.required">Bạn cần nhập địa chỉ</div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="exampleInputEmail1">Tỉnh/ thành phố<span style="color: red;">*</span>: </label>
+
+                                    <select formControlName="country" class="form-control" (change)="onChangeCountry($event)">
+                          <option value="">Select country...</option>
+                          <option *ngFor="let item of countries" [value]="item.id">
+                              
+                            {{item.nameCountry}} 
+                        </option>
+                        </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="exampleInputEmail1">Quận/ huyện<span style="color: red;">*</span>: </label>
+
+                                    <select formControlName="state" class="form-control" (change)="onChangeStates($event)">
+                        <option value="">Select state...</option>
+                        <option *ngFor="let state of states" [value]="state.id">{{state.nameStates}}</option>
+                      </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    <label for="exampleInputEmail1">Phường/ xã<span style="color: red;">*</span>: </label>
+
+                                    <select formControlName="city" class="form-control">
+                                  <option value="">Select city...</option>
+                                  <option *ngFor="let city of citys" [value]="city.id">{{city.nameCities}}</option>
+                                </select>
+                                </div>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary">Thêm thông tin người dùng</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
