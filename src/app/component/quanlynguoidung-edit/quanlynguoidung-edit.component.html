@@ -52,7 +52,7 @@
                         <label for="">Quận/ huyện</label>
                         <select class="form-control" (change)="onChangeStates($event)" [(ngModel)]="user.statesId" [ngModelOptions]="{standalone: true}">
 
-                            <option  value="{{ state.id}}">{{ state.nameStates}}</option>
+                            <option *ngIf="checkState" value="{{ state.id}}">{{ state.nameStates}}</option>
                             <ng-container *ngFor="let count of states  ">
                                 <option *ngIf="count.id!=state.id" [value]="count.id">{{count.nameStates}}</option>
                             </ng-container>
@@ -67,7 +67,7 @@
                         <label for="">Phường/ xã</label>
                         <select class="form-control" [(ngModel)]="user.citesId" [ngModelOptions]="{standalone: true}">
                             
-                            <option  value="{{ city.id}}">{{ city.nameCities}}</option>
+                            <option *ngIf="checkCity" value="{{ city.id}}">{{ city.nameCities}}</option>
                             <ng-container *ngFor="let count of citys ">
                                 <option *ngIf="count.id!=city.id" [value]="count.id">{{count.nameCities}}</option>
                             </ng-container>
