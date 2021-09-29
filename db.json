@@ -19,6 +19,46 @@
       "countryId": "2",
       "statesId": "3",
       "citesId": "4"
+    },
+    {
+      "name": "Nông Văn",
+      "phone": 3223,
+      "email": "ht@fpt.com.vn",
+      "address": "163 chiến thắng -Hà Nội",
+      "countryId": "1",
+      "statesId": "1",
+      "citesId": "2",
+      "id": 6
+    },
+    {
+      "name": "Người dùng",
+      "phone": 914003312,
+      "email": "kt@fpt.com.vn",
+      "address": "Hà Đông - Hà Nội",
+      "countryId": "2",
+      "statesId": "3",
+      "citesId": "5",
+      "id": 7
+    },
+    {
+      "name": "Messi",
+      "phone": 92131232,
+      "email": "messi@fpt.com.vn",
+      "address": "Pari-pháp",
+      "countryId": "1",
+      "statesId": "1",
+      "citesId": "1",
+      "id": 8
+    },
+    {
+      "name": "hary",
+      "phone": 901234334,
+      "email": "hary@fpt.com.vn",
+      "address": "anh quốc",
+      "countryId": "2",
+      "statesId": "4",
+      "citesId": "8",
+      "id": 9
     }
   ],
   "countries": [
@@ -44,7 +84,7 @@
     },
     {
       "id": 3,
-      "nameStates": "Vu Ban",
+      "nameStates": "Xuân Trường",
       "countyId": 2
     },
     {
@@ -66,18 +106,38 @@
     },
     {
       "id": 3,
-      "nameCities": "Thanh Loi",
-      "statesId": 3
+      "nameCities": "Thượng Đình",
+      "statesId": 2
     },
     {
       "id": 4,
-      "nameCities": "Lien Minh",
-      "statesId": 3
+      "nameCities": "Văn Quán",
+      "statesId": 2
     },
     {
       "id": 5,
-      "nameCities": "Lien Bao",
+      "nameCities": "Xã 1",
       "statesId": 3
+    },
+    {
+      "id": 6,
+      "nameCities": "Xã 2",
+      "statesId": 3
+    },
+    {
+      "id": 7,
+      "nameCities": "Xã 3",
+      "statesId": 3
+    },
+    {
+      "id": 8,
+      "nameCities": "Xã 21",
+      "statesId": 4
+    },
+    {
+      "id": 9,
+      "nameCities": "Xã 22",
+      "statesId": 4
     }
   ]
 }
