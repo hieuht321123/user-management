@@ -23,7 +23,7 @@
                     <tbody>
                         <!-- | filter:searchValue | paginate: { itemsPerPage: 3, currentPage: p }" -->
                         <!-- | slice: (page-1) * pageSize : page * pageSize |search:searchValue -->
-                        <tr *ngFor="let item of userList |sort : sortBy: sortValue | filter:searchValue | paginate: { itemsPerPage: 3, currentPage: p }">
+                        <tr *ngFor="let item of userList |sort : sortBy: sortValue | filter:searchValue | paginate: { itemsPerPage: 5, currentPage: p }">
                             <td [routerLink]="[item.id,'detail']">{{item.name}}</td>
                             <td [routerLink]="[item.id,'detail']">{{item.email}}</td>
                             <td>
